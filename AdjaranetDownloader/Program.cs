@@ -1,8 +1,17 @@
-﻿using System.Text;
+﻿/*
+ * 
+ * 1. xcode-select --install
+ * 2. export PATH="/opt/homebrew/bin:$PATH"
+ * 3. brew install ffmpeg --with-options
+ * 4. ffmpeg -f concat -safe 0 -i fileList.txt -c copy output.mp4
+ * 
+ */
+
+using System.Text;
 
 var sb = new StringBuilder();
 
-for (int i = 0; i < 757; i++)
+for (int i = 1; i <= 757; i++)
 {
     sb.AppendLine($"file 'seg-{i}-v1-a1.ts'");
 }
